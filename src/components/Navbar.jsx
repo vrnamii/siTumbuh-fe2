@@ -6,7 +6,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow py-4">
+    <nav
+      className="py-4 fixed top-0 left-0 w-full z-50"
+      style={{
+        background: "linear-gradient(to bottom, #fff 50%, rgba(255,255,255,0))",
+        backdropFilter: "blur(2px)"
+      }}
+    >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
