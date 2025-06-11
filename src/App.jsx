@@ -1,12 +1,28 @@
+import NavbarUser from "./components/NavbarUser";
 import Navbar from "./components/Navbar"
 import HomePage from "./pages/HomePage"
 import Footer from "./components/Footer"
 
-function App() {
+// export default function App() {
+//   return (
+//     <div>
+//       {/* Navbar */}
+//       <Navbar />
+
+//       {/* Content */}
+//       <HomePage />
+
+//       {/* Footer */}
+//       <Footer />
+//     </div>
+//   )
+// };
+
+export default function AppLogIn() {
   return (
     <div>
       {/* Navbar */}
-      <Navbar />
+      <NavbarUser />
 
       {/* Content */}
       <HomePage />
@@ -15,6 +31,4 @@ function App() {
       <Footer />
     </div>
   )
-}
-
-export default App
+};

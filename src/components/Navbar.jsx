@@ -24,17 +24,17 @@ export default function Navbar() {
         {/* Hamburger Menu */}
         <div className="lg:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
-            <img src={menu} className="text-3xl text-[var(--color-[var(--color-blue)])]" />
+            <img src={menu} className="text-3xl text-[var(--color-blue)]" />
           </button>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden lg:flex space-x-6 text-base font-regular text-black">
-          <li><a href="#" className="hover:font-medium hover:text-[var(--color-[var(--color-blue)])]">Beranda</a></li>
-          <li><a href="#" className="hover:font-medium hover:text-[var(--color-[var(--color-blue)])]">Tentang Kami</a></li>
-          <li><a href="#" className="hover:font-medium hover:text-[var(--color-[var(--color-blue)])]">Artikel</a></li>
-          <li><a href="#" className="hover:font-medium hover:text-[var(--color-[var(--color-blue)])]">Daftar Bidan</a></li>
-          <li><a href="#" className="hover:font-medium hover:text-[var(--color-[var(--color-blue)])]">Testimoni</a></li>
+          <li><a href="#" className="hover:font-medium hover:text-[var(--color-blue)]">Beranda</a></li>
+          <li><a href="#" className="hover:font-medium hover:text-[var(--color-blue)]">Tentang Kami</a></li>
+          <li><a href="#" className="hover:font-medium hover:text-[var(--color-blue)]">Artikel</a></li>
+          <li><a href="#" className="hover:font-medium hover:text-[var(--color-blue)]">Daftar Bidan</a></li>
+          <li><a href="#" className="hover:font-medium hover:text-[var(--color-blue)]">Testimoni</a></li>
         </ul>
 
         {/* Desktop Buttons */}
@@ -61,3 +61,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+
