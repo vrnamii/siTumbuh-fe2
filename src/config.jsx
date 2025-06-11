@@ -1,0 +1,1 @@
+export const ENDPOINT = "https://situmbuh-api-production-832d.up.railway.app";
