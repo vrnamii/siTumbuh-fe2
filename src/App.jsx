@@ -1,6 +1,7 @@
 import NavbarUser from "./components/NavbarUser";
 import Navbar from "./components/Navbar"
 import HomePage from "./pages/HomePage"
+import PredictPage from "./pages/PredictPage"
 import Footer from "./components/Footer"
 
 // export default function App() {
@@ -25,7 +26,7 @@ export default function AppLogIn() {
       <NavbarUser />
 
       {/* Content */}
-      <HomePage />
+      <PredictPage />
 
       {/* Footer */}
       <Footer />
