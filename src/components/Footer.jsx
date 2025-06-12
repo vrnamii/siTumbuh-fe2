@@ -50,7 +50,7 @@ export default function Footer() {
           <h3 className="text-[var(--color-blue)] font-semibold mb-4">Bantuan & Panduan</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="#" className="hover:text-[var(--color-blue)]">Kontak kami</a></li>
-            <li><a href="#" className="hover:text-[var(--color-blue)]">Kebijakan Privasi</a></li>
+            <li><a href="/kebijakan-privasi" className="hover:text-[var(--color-blue)]">Kebijakan Privasi</a></li>
             <li><a href="#" className="hover:text-[var(--color-blue)]">Syarat & Ketentuan</a></li>
             <li><a href="#" className="hover:text-[var(--color-blue)]">FAQ</a></li>
           </ul>
