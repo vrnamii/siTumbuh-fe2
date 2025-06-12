@@ -1,8 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from "./components/Navbar"
-import ContactUs from "./pages/kontak-kami"
-import HomePage from "./pages/HomePage"
-import Footer from "./components/Footer"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import SyaratKetentuan from "./pages/syarat-ketentuan.jsx"; 
 
 export default function App() {
   return (
@@ -10,9 +10,10 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/kontak-kami" element={<ContactUs />} />
+        <Route path="/syarat-ketentuan" element={<SyaratKetentuan />} />
+        {/* Rute lain bisa ditambahkan di sini */}
       </Routes>
       <Footer />
     </Router>
   );
-};
+}

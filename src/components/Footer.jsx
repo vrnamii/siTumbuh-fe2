@@ -52,7 +52,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link to="/kontak-kami" className="hover:text-[var(--color-blue)]">Kontak kami</Link></li>
             <li><Link to="/kebijakan-privasi" className="hover:text-[var(--color-blue)]">Kebijakan Privasi</Link></li>
-            <li><a href="#" className="hover:text-[var(--color-blue)]">Syarat & Ketentuan</a></li>
+            <li><Link to="/syarat-ketentuan" className="hover:text-[var(--color-blue)]">Syarat & Ketentuan</Link></li>
             <li><a href="#" className="hover:text-[var(--color-blue)]">FAQ</a></li>
           </ul>
         </div>
