@@ -1,51 +1,83 @@
 import React, { useState } from "react";
-import anakibu from '../assets/anakibu.png';
+import ChildDoctor from "../assets/child-doctor.svg";
+import Search from "../assets/search.svg";
+import ArrowRight from "../assets/arrow-right.svg";
 
 const bidanList = [
     {
         id: 1,
-        nama: "Bidan Profesional #1",
-        lokasi: "Kota A",
-        foto: "https://randomuser.me/api/portraits/men/11.jpg",
-        deskripsi: "Berpengalaman lebih dari 10 tahun. Spesialis ibu dan anak.",
+        nama: "dr. Markus Mualim Danusantoso, Sp.A",
+        pendidikan: "Spesialis Anak - FKUI",
+        tempat_praktik: "RS Pondok Indah - Jakarta Selatan",
+        rating: 4,
+        foto_url: "https://zoockoiwfztxckmtdmct.supabase.co/storage/v1/object/sign/bidan/dr.-Markus-Mualim-Danusantoso,-Sp.A-5f0a15c1-c661-4738-b586-aa38739168d4.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wYTllNDY4Zi1iMDZkLTRkOGMtYjVhNC0yN2Y0M2NjYWYyZWUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJiaWRhbi9kci4tTWFya3VzLU11YWxpbS1EYW51c2FudG9zbywtU3AuQS01ZjBhMTVjMS1jNjYxLTQ3MzgtYjU4Ni1hYTM4NzM5MTY4ZDQud2VicCIsImlhdCI6MTc0OTU3NzE0OCwiZXhwIjoxNzUyMTY5MTQ4fQ.XO0sPAxJe7JaNNlAeP963NcdFyZTQryGAkay7woQNhM",
+        latitude: -6.2847,
+        longitude: 106.7829,  
+        harga: 400000,      
+        jadwal_praktik: "Senin–Jumat, 09.00–12.00 WIB",
     },
     {
         id: 2,
-        nama: "Bidan Profesional #2",
-        lokasi: "Kota A",
-        foto: "https://randomuser.me/api/portraits/men/12.jpg",
-        deskripsi: "Lulusan terbaik universitas ternama. Ramah dan profesional.",
+        nama: "dr. I Gusti Ayu Nyoman Partiwi, Sp.A, MARS",
+        pendidikan: "Sp.A, Magister Administrasi Rumah Sakit - FKUI",
+        tempat_praktik: "RSIA Bunda - Menteng, Jakarta",
+        rating: 5,
+        foto_url: "https://zoockoiwfztxckmtdmct.supabase.co/storage/v1/object/sign/bidan/dr.-I-Gusti-Ayu-Nyoman-Partiwi,-Sp.A,-MARS.PNG-06038e57-7b8e-4b16-b31e-7d52a5f850f9.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wYTllNDY4Zi1iMDZkLTRkOGMtYjVhNC0yN2Y0M2NjYWYyZWUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJiaWRhbi9kci4tSS1HdXN0aS1BeXUtTnlvbWFuLVBhcnRpd2ksLVNwLkEsLU1BUlMuUE5HLTA2MDM4ZTU3LTdiOGUtNGIxNi1iMzFlLTdkNTJhNWY4NTBmOS53ZWJwIiwiaWF0IjoxNzQ5NTgxNDQ0LCJleHAiOjE3NTIxNzM0NDR9.iwBmAJdNwFX_lu7yYqU46R4sq3ag57S71OWSU3NXrig",
+        latitude: -6.1963,
+        longitude: 106.8385,  
+        harga: 600000,      
+        jadwal_praktik: "Senin–Sabtu, 10.00–13.00 WIB",
     },
     {
         id: 3,
-        nama: "Bidan Profesional #3",
-        lokasi: "Kota A",
-        foto: "https://randomuser.me/api/portraits/men/13.jpg",
-        deskripsi: "Melayani konsultasi kehamilan dan tumbuh kembang anak.",
+        nama: "dr. Madeleine Ramdhani Jasin, Sp.A (K)",
+        pendidikan: "Konsultan Tumbuh Kembang - FKUI",
+        tempat_praktik: "RSIA Bunda Jakarta - Menteng",
+        rating: 5,
+        foto_url: "https://zoockoiwfztxckmtdmct.supabase.co/storage/v1/object/sign/bidan/dr.-Madeleine-Ramdhani-Jasin,-Sp.A-(K)-adbc967e-a4e7-42ed-9b9c-7c0933e236b2.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wYTllNDY4Zi1iMDZkLTRkOGMtYjVhNC0yN2Y0M2NjYWYyZWUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJiaWRhbi9kci4tTWFkZWxlaW5lLVJhbWRoYW5pLUphc2luLC1TcC5BLShLKS1hZGJjOTY3ZS1hNGU3LTQyZWQtOWI5Yy03YzA5MzNlMjM2YjIud2VicCIsImlhdCI6MTc0OTU3NzI3NCwiZXhwIjoxNzUyMTY5Mjc0fQ.SVfNFxLYedrDvmADmtE963-NOZ1UiSMFAS26peb7MZQ",
+        latitude: -6.1961,
+        longitude: 106.8386,  
+        harga: 550000,      
+        jadwal_praktik: "Rabu & Sabtu, 09.00–12.00 WIB",
     },
     {
         id: 4,
-        nama: "Bidan Profesional #4",
-        lokasi: "Kota A",
-        foto: "https://randomuser.me/api/portraits/men/14.jpg",
-        deskripsi: "Berpengalaman di klinik dan rumah sakit ibu & anak.",
+        nama: "dr. Frieda Handayani, Sp.A (K)",
+        pendidikan: "Konsultan Anak - FKUI",
+        tempat_praktik: "RSUP Persahabatan - Jakarta Timur",
+        rating: 5,
+        foto_url: "https://zoockoiwfztxckmtdmct.supabase.co/storage/v1/object/sign/bidan/Frieda%20Handayani%20Kawanto,%20Sp.%20A%20(K).jpg.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8wYTllNDY4Zi1iMDZkLTRkOGMtYjVhNC0yN2Y0M2NjYWYyZWUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJiaWRhbi9GcmllZGEgSGFuZGF5YW5pIEthd2FudG8sIFNwLiBBIChLKS5qcGcud2VicCIsImlhdCI6MTc0OTU4MTI5OSwiZXhwIjoxNzUyMTczMjk5fQ.odGSMThqV2sM1R2gVDWNcnr4P4DRhKhrAj1UyV24J50",
+        latitude: -6.1964,
+        longitude: 106.8912,  
+        harga: 550000,      
+        jadwal_praktik: "Rabu & Jumat, 10.00–13.00 WIB",
     },
 ];
 
-const DaftarBidan = () => {
+export default function DaftarBidan() {
     const [selectedBidan, setSelectedBidan] = useState(null);
+    const [search, setSearch] = useState("");
+
+    // Universal search: filter by name OR location (case-insensitive)
+    const filteredBidan = bidanList.filter(bidan => {
+        const q = search.toLowerCase();
+        return (
+            bidan.nama.toLowerCase().includes(q) ||
+            bidan.tempat_praktik.toLowerCase().includes(q)
+        );
+    });
 
     return (
         <div className="font-sans">
             {/* HERO SECTION */}
-            <section className="relative w-full h-[70vh] flex items-center justify-center bg-white overflow-hidden">
+            <section className="relative w-full h-screen flex items-center justify-center bg-white overflow-hidden">
                 <img
-                    src={anakibu}
+                    src={ChildDoctor}
                     alt="Bidan menggendong bayi"
-                    className="absolute inset-0 w-full h-full object-cover z-0 rounded-b-3xl shadow-lg"
+                    className="absolute inset-0 w-full h-full object-cover z-0 rounded-b-3xl shadow-lg mt-22"
                     style={{objectPosition: 'center top'}}
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 z-10 flex items-center justify-center">
+                <div className="absolute inset-0 z-10 flex items-center justify-center">
                     <div className="text-white max-w-xl text-center px-4">
                         <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight drop-shadow-lg">
                             Lorem ipsum fames fusce venenatis tellus.
@@ -55,144 +87,70 @@ const DaftarBidan = () => {
                         </p>
                         <a
                             href="#daftar-bidan"
-                            className="inline-block bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition shadow text-lg"
+                            className="flex bg-black text-white gap-2 justify-center py-2 px-6 rounded-md hover:shadow-lg text-lg w-fit mx-auto"
                         >
-                            Cari Bidan untuk Si Kecil &rarr;
+                            Cari Bidan untuk Si Kecil
+                            <img src={ArrowRight} alt="panah" />
                         </a>
                     </div>
                 </div>
             </section>
 
-            {/* DAFTAR BIDAN SECTION */}
-            <section id="daftar-bidan" className="py-12 px-6 bg-white">
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl font-bold mb-2 text-left text-blue-700">
-                        Daftar Bidan Profesional
-                    </h2>
-                    <p className="mb-8 text-blue-700 text-left max-w-2xl">
-                        Temukan bidan profesional terbaik untuk kebutuhan ibu dan anak Anda.
-                    </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                        {bidanList.map((bidan) => (
-                            <div
-                                key={bidan.id}
-                                className="bg-white border border-blue-300 rounded-2xl p-6 shadow-md flex flex-col items-center transition hover:shadow-lg"
-                            >
-                                <img
-                                    src={bidan.foto}
-                                    alt={bidan.nama}
-                                    className="w-32 h-40 object-cover rounded-xl mb-4 bg-gray-200"
-                                />
-                                <h3 className="font-semibold text-blue-700 text-lg mb-1">
-                                    {bidan.nama}
-                                </h3>
-                                <p className="text-blue-700 text-sm mb-4 text-center">
-                                    {bidan.deskripsi}
-                                </p>
-                                <button
-                                    className="bg-blue-500 text-white px-6 py-2 rounded-lg w-full font-semibold hover:bg-blue-400 transition"
-                                    onClick={() => setSelectedBidan(bidan)}
-                                >
-                                    Detail
-                                </button>
-                            </div>
-                        ))}
+
+            {/* DAFTAR DOKTER SECTION */}
+            <section className="py-12 px-4 md:px-8 bg-white text-center">
+                <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-blue)] mb-2">
+                    Daftar Dokter Anak
+                </h2>
+                <p className="text-[var(--color-darkgrey)] mb-6">
+                    Temukan dokter anak terbaik untuk kebutuhan si kecil.
+                </p>
+                {/* Universal Search Bar */}
+                <div className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto mb-8">
+                    <div className="relative flex-1">
+                        <input
+                            type="text"
+                            placeholder="Cari dokter atau lokasi..."
+                            value={search}
+                            onChange={e => setSearch(e.target.value)}
+                            className="w-full py-3 pl-5 pr-12 rounded-full border-2 border-[var(--color-grey)] shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300"
+                        />
+                        <img src={Search} alt="cari" className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 opacity-60" />
                     </div>
                 </div>
-
-                {/* Modal Detail Bidan */}
-                {selectedBidan && (
-                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
-                        <div className="bg-white rounded-lg p-6 max-w-sm w-full relative shadow-lg">
-                            <button
-                                className="absolute top-2 right-2 text-gray-400 hover:text-black text-xl"
-                                onClick={() => setSelectedBidan(null)}
-                                aria-label="Tutup"
-                            >
-                                &times;
-                            </button>
+                {/* Doctor Cards Grid */}
+                <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    {filteredBidan.slice(0, 4).map((bidan) => (
+                        <div
+                            key={bidan.id}
+                            className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center"
+                        >
                             <img
-                                src={selectedBidan.foto}
-                                alt={selectedBidan.nama}
-                                className="w-32 h-32 object-cover rounded-full mx-auto mb-4 bg-gray-200"
+                                src={bidan.foto_url}
+                                alt={bidan.nama}
+                                className="w-24 h-24 rounded-full object-cover mb-4"
                             />
-                            <h3 className="text-xl font-bold mb-2 text-blue-700 text-center">
-                                {selectedBidan.nama}
-                            </h3>
-                            <p className="text-gray-500 text-center mb-2">
-                                {selectedBidan.lokasi}
-                            </p>
-                            <p className="text-black text-center mb-4">
-                                {selectedBidan.deskripsi}
-                            </p>
-                            <button
-                                className="bg-blue-500 text-white px-6 py-2 rounded w-full hover:bg-blue-400"
-                                onClick={() => setSelectedBidan(null)}
-                            >
-                                Tutup
-                            </button>
-                        </div>
-                    </div>
-                )}
-            </section>
-
-            {/* PETA LOKASI SECTION */}
-            <section className="py-12 px-6 text-center bg-white">
-                <h2 className="text-xl font-bold text-blue-700 mb-4">
-                    Lokasi Praktik Bidan
-                </h2>
-                <input
-                    type="text"
-                    placeholder="Cari berdasarkan lokasi..."
-                    className="px-4 py-2 border border-gray-300 rounded mb-6 w-72"
-                />
-                <div className="w-full h-[400px]">
-                    <iframe
-                        title="Map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0547396491813!2d106.8271532741089!3d-6.256187261255763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1579b3d4e77%3A0x1f3cb7646f21f2a4!2sJakarta%20Selatan!5e0!3m2!1sid!2sid!4v1623329851313!5m2!1sid!2sid"
-                        width="100%"
-                        height="100%"
-                        allowFullScreen=""
-                        loading="lazy"
-                        className="rounded-md border"
-                    ></iframe>
-                </div>
-            </section>
-
-            {/* HASIL PENCARIAN SECTION */}
-            <section className="py-12 px-6 text-left bg-gray-100">
-                <h2 className="text-2xl font-bold mb-6 text-blue-700">
-                    Hasil Pencarian
-                </h2>
-                {[1, 2, 3].map((i) => (
-                    <div
-                        key={i}
-                        className="flex items-center justify-between bg-white p-4 rounded shadow mb-4"
-                    >
-                        <div className="flex items-center gap-4">
-                            <img
-                                src={`https://randomuser.me/api/portraits/women/${i + 30}.jpg`}
-                                alt={`Bidan Anisa #${i}`}
-                                className="w-16 h-16 rounded-full object-cover"
-                            />
-                            <div>
-                                <h3 className="font-semibold text-black">Bidan Anisa #{i}</h3>
-                                <p className="text-sm text-gray-500">
-                                    Lokasi: Jakarta Selatan - Spesialis anak & ibu hamil
-                                </p>
+                            <h3 className="font-semibold text-[var(--color-blue)]">{bidan.nama}</h3>
+                            <p className="text-sm text-[var(--color-darkgrey)] mt-2 mb-1">{bidan.pendidikan}</p>
+                            <p className="text-xs text-[var(--color-darkgrey)] mb-2">{bidan.tempat_praktik}</p>
+                            <div className="flex items-center justify-center mb-2">
+                                {Array.from({ length: 5 }).map((_, i) => (
+                                    <span key={i} className={i < bidan.rating ? 'text-[var(--color-yellow)]' : 'text-[var(--color-grey)]'}>★</span>
+                                ))}
                             </div>
-                        </div>
-                        <div className="flex flex-col items-end">
-                            <div className="text-yellow-400 mb-2">{'★'.repeat(4)}☆</div>
-                            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400">
-                                lihat lokasi
+                            <button
+                                className="bg-[var(--color-blue)] text-white px-4 py-2 rounded-lg hover:bg-blue-400 transition"
+                                onClick={() => setSelectedBidan(bidan)}
+                            >
+                                Detail
                             </button>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                    {filteredBidan.length === 0 && (
+                        <div className="col-span-full text-center text-gray-400 py-10">Tidak ada dokter ditemukan</div>
+                    )}
+                </div>
             </section>
         </div>
     );
 };
-
-export default DaftarBidan;
