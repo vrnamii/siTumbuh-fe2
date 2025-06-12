@@ -11,11 +11,11 @@ import star from '../assets/star-1.svg';
 
 export default function HomePage() {
   return (
-    <div className="py-24 ">
+    <div className="pt-32 lg:pt-44 ">
       {/* Hero Section */}
-      <section className="flex flex-col-reverse px-12 lg:flex-row items-center justify-between gap-8">
+      <section className="flex flex-col-reverse px-6 lg:px-24 lg:flex-row items-center justify-between gap-8">
         {/* Left Text Content */}
-        <div className="max-w-xl text-center lg:text-left">
+        <div className="max-w-xl text-center lg:text-left ">
           <h1 className="text-3xl md:text-5xl font-semibold leading-tight text-black mb-6">
             Lorem ipsum <br />
             fames fusce <br />
@@ -44,13 +44,13 @@ export default function HomePage() {
       </section>
 
       {/* Tentang Kami */}
-      <section className="bg-white text-center px-6 mt-6 md:px-16 py-12">
+      <section className="bg-white text-center px-6 mt-26 md:px-16 py-12">
         <h2 className="text-[var(--color-blue)] text-xl font-semibold mb-4 md:text-3xl">Tentang Kami</h2>
-        <p className="max-w-2xl mx-auto text-black text-sm md:text-base mb-8">
+        <p className="max-w-2xl mx-auto text-[var(--color-darkgrey)] text-sm md:text-base mb-8">
           Lorem ipsum dolor sit amet consectetur. Scelerisque aenean etiam risus integer pharetra. 
           Sagittis tincidunt nascetur donec diam euismod vitae elit sed proin. 
         </p>
-        <div className="flex flex-col md:flex-row items-center gap-0">
+        <div className="flex flex-col md:flex-row items-center gap-8">
           <img
             src={momAndChild}
             alt="Ibu dan Anak"
@@ -125,9 +125,9 @@ export default function HomePage() {
 
       {/* Artikel Kesehatan */}
       <section className="px-6 py-24 md:px-12 ">
-        <div className="text-xl mb-8 md:text-3xl">
+        <div className="text-xl text-center mb-8 md:text-3xl">
           <h2 className="text-[var(--color-blue)] text-xl font-semibold mb-4 md:text-3xl">Artikel Kesehatan</h2>
-          <p className="text-sm md:text-base">Lorem ipsum dolor sit amet consectetur. Scelerisque aenean etiam risus integer pharetra.</p>
+          <p className="text-[var(--color-darkgrey)] text-sm md:text-base">Lorem ipsum dolor sit amet consectetur. Scelerisque aenean etiam risus integer pharetra.</p>
         </div>
         <div className="space-y-0">
           <div className="flex flex-col md:flex-row gap-6 items-center border-y-2 border-[var(--color-grey)] p-10 ">
@@ -188,15 +188,15 @@ export default function HomePage() {
       {/* Daftar Bidan */}
       <section className="px-6 md:px-12">
         <h2 className="text-[var(--color-blue)] text-xl font-semibold mb-4 text-center md:text-3xl">Daftar Bidan</h2>
-        <p className="text-center text-black mb-8">
+        <p className="text-center text-[var(--color-darkgrey)] text-sm md:text-base">
           Lorem ipsum dolor sit amet consectetur.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white border-[var(--color-grey)] border-2 shadow-md  rounded-xl p-10 hover:shadow-xl">
-            <h4 className="font-semibold mb-2">
+            <h4 className="font-semibold mb-2 text-base md:text-lg lg:text-xl">
               Lorem ipsum ante blandit varius fusce
             </h4>
-            <p className="text-black mb-3 text-sm md:text-base">
+            <p className="text-black mb-3 text-xs md:text-sm lg:text-base">
               Lorem ipsum cursus sapien cursus ut urna aliquam tristique sed.
             </p>
             <div>
@@ -207,10 +207,10 @@ export default function HomePage() {
             </div>
           </div>
           <div className="bg-white border-[var(--color-grey)] border-2 shadow-md  rounded-xl p-10 hover:shadow-xl">
-            <h4 className="font-semibold mb-2">
+            <h4 className="font-semibold mb-2 text-base md:text-lg lg:text-xl">
               Lorem ipsum ante blandit varius fusce
             </h4>
-            <p className="text-black mb-3 text-sm md:text-base">
+            <p className="text-black mb-3 text-xs md:text-sm lg:text-base">
               Lorem ipsum cursus sapien cursus ut urna aliquam tristique sed.
             </p>
             <div>
@@ -232,7 +232,7 @@ export default function HomePage() {
       {/* Testimoni */}
       <section className="py-16 text-center px-4 md:px-16">
         <h2 className="text-[var(--color-blue)] text-xl font-semibold mb-4 text-center md:text-3xl">Testimoni</h2>
-        <p className="text-black mb-10">
+        <p className="text-[var(--color-darkgrey)] mb-10 text-sm md:text-base">
           Lorem ipsum dolor sit amet consectetur.
         </p>
         <div className="overflow-x-auto scrollbar-hide px-2 md:px-6 py-8">

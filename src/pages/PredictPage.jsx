@@ -2,10 +2,10 @@ import '/src/index.css';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen px-4 py-32 bg-white flex items-center justify-center">
+    <div className="min-h-screen px-4 pt-32 pb-20 bg-white flex items-center justify-center md:pb-10">
       <div className="w-full max-w-2xl">
         {/* Judul */}
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center mb-2">
+        <h1 className="text-[var(--color-blue)] text-xl md:text-3xl font-semibold text-center mb-2">
           Lorem ipsum fames fusce venenatis tellus
         </h1>
         <p className="text-sm sm:text-base text-center text-gray-500 mb-10 px-2 sm:px-6">
