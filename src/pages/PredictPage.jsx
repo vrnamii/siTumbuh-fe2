@@ -1,6 +1,6 @@
 import '/src/index.css';
 
-export default function HomePage() {
+export default function PredictPage() {
   return (
     <div className="min-h-screen px-4 pt-32 pb-20 bg-white flex items-center justify-center md:pb-10">
       <div className="w-full max-w-2xl">

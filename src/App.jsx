@@ -1,4 +1,6 @@
 import NavbarUser from "./components/NavbarUser";
+import EditProfilUser from "./pages/EditProfilUser";
+import ProfilUser from "./pages/ProfilUser";
 import Navbar from "./components/Navbar"
 import HomePage from "./pages/HomePage"
 import PredictPage from "./pages/PredictPage"
@@ -27,16 +29,10 @@ export default function AppLogIn() {
       {/* Navbar */}
       <NavbarUser />
 
-      {/* HomePage */}
-      < HomePage/>
+      {/* Profile User */}
 
-      {/* Content */}
-      <PredictPage />
-
-      {/* Result */}
-      < NotStunting />
-      < Stunting />
-
+      < EditProfilUser />
+      
       {/* Footer */}
       <Footer />
     </div>
