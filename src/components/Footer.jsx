@@ -3,6 +3,7 @@ import { FaFacebookF, FaXTwitter, FaInstagram, FaLinkedinIn } from "react-icons/
 import location from "../assets/location-pin.svg";
 import phoneNumber from '../assets/phone.svg';
 import email from '../assets/mail-01.svg';
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -49,8 +50,8 @@ export default function Footer() {
         <div>
           <h3 className="text-[var(--color-blue)] font-semibold mb-4">Bantuan & Panduan</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-[var(--color-blue)]">Kontak kami</a></li>
-            <li><a href="/kebijakan-privasi" className="hover:text-[var(--color-blue)]">Kebijakan Privasi</a></li>
+            <li><Link to="/kontak-kami" className="hover:text-[var(--color-blue)]">Kontak kami</Link></li>
+            <li><Link to="/kebijakan-privasi" className="hover:text-[var(--color-blue)]">Kebijakan Privasi</Link></li>
             <li><a href="#" className="hover:text-[var(--color-blue)]">Syarat & Ketentuan</a></li>
             <li><a href="#" className="hover:text-[var(--color-blue)]">FAQ</a></li>
           </ul>

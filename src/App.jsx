@@ -1,25 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from "./components/Navbar"
+import ContactUs from "./pages/kontak-kami"
 import HomePage from "./pages/HomePage"
 import Footer from "./components/Footer"
-import PrivacyPolicy from "./pages/kebijakan-privasi"
 
-function App() {
+export default function App() {
   return (
     <Router>
-      {/* Navbar */}
       <Navbar />
-
-      {/* Content */}
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/kebijakan-privasi" element={<PrivacyPolicy />} />
+        <Route path="/kontak-kami" element={<ContactUs />} />
       </Routes>
-
-      {/* Footer */}
       <Footer />
     </Router>
-  )
-}
-
-export default App
+  );
+};
