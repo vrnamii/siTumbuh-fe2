@@ -1,5 +1,6 @@
 import NavbarUser from "./components/NavbarUser";
 import EditProfilUser from "./pages/EditProfilUser";
+import PredictionHistory from "./pages/PredictionHistory";
 import ProfilUser from "./pages/ProfilUser";
 import Navbar from "./components/Navbar"
 import HomePage from "./pages/HomePage"
@@ -31,7 +32,7 @@ export default function AppLogIn() {
 
       {/* Profile User */}
 
-      < EditProfilUser />
+      < PredictionHistory />
       
       {/* Footer */}
       <Footer />
