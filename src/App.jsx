@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage"
 import PredictPage from "./pages/PredictPage"
 import NotStunting from "./components/PredictNotStunting"
 import Stunting from "./components/PredictStunting"
+import Faq from "./pages/Faq"
 import Footer from "./components/Footer"
 
 // export default function App() {
@@ -32,7 +33,7 @@ export default function AppLogIn() {
 
       {/* Profile User */}
 
-      < PredictionHistory />
+      < Faq />
       
       {/* Footer */}
       <Footer />
