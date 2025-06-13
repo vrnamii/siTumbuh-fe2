@@ -80,10 +80,10 @@ export default function DaftarBidan() {
                 <div className="absolute inset-0 z-10 flex items-center justify-center">
                     <div className="text-white max-w-xl text-center px-4">
                         <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight drop-shadow-lg">
-                            Lorem ipsum fames fusce venenatis tellus.
+                            Temukan Bidan dan Dokter Anak Terbaik untuk Si Kecil
                         </h1>
                         <p className="mb-6 text-lg md:text-xl drop-shadow">
-                            Lorem ipsum dolor sit amet consectetur. At sagittis semper duis sed curabitur vitae id enim diam.
+                            Dapatkan layanan kesehatan anak dan ibu terbaik dari tenaga profesional terpercaya di sekitar Anda. Pilih bidan atau dokter anak yang sesuai dengan kebutuhan keluarga Anda.
                         </p>
                         <a
                             href="#daftar-bidan"
@@ -103,7 +103,7 @@ export default function DaftarBidan() {
                     Daftar Dokter Anak
                 </h2>
                 <p className="text-[var(--color-darkgrey)] mb-6">
-                    Temukan dokter anak terbaik untuk kebutuhan si kecil.
+                    Cari dan temukan bidan atau dokter anak berpengalaman yang siap membantu tumbuh kembang si kecil dengan sepenuh hati.
                 </p>
                 {/* Universal Search Bar */}
                 <div className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto mb-8">
